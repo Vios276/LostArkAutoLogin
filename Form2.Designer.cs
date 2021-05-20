@@ -56,6 +56,6 @@ namespace LostArkAutoLogin
 
         #endregion
 
-        public System.Windows.Forms.WebBrowser Browser;
+        private System.Windows.Forms.WebBrowser Browser;
     }
 }

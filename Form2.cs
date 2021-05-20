@@ -33,6 +33,13 @@ namespace LostArkAutoLogin
             base.OnLoad(e);
 
             Browser.DocumentCompleted += Browser_DocumentCompleted;
+            Browser.Navigating += Browser_Navigating;
+        }
+
+        private void Browser_Navigating(object sender, WebBrowserNavigatingEventArgs e)
+        {
+            if (e.Url.ToString() == "https://lostark.game.onstove.com/Main")
+                Close();
         }
 
         private void Browser_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)

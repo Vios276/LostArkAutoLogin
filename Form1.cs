@@ -121,14 +121,5 @@ namespace LostArkAutoLogin
                 timer.Start();
             }
         }
-
-        protected override void OnFormClosed(FormClosedEventArgs e)
-        {
-            base.OnFormClosed(e);
-
-            wb.Refresh(WebBrowserRefreshOption.Completely);
-            var vv = new Form2();
-            vv.Browser.ShowPropertiesDialog();
-        }
     }
 }
