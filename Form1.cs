@@ -48,7 +48,13 @@ namespace LostArkAutoLogin
             cbSnsType.SelectedIndex = 0;
             timer.AutoReset = true;
             wb.DocumentCompleted += Wb_DocumentCompleted;
+            wb.Navigating += Wb_Navigating;
             timer.Elapsed += Timer_Elapsed;
+        }
+
+        private void Wb_Navigating(object sender, WebBrowserNavigatingEventArgs e)
+        {
+            Console.Write(wb.Document.Cookie);
         }
 
         private void KillStoveClient()
