@@ -13,28 +13,25 @@ namespace LostArkAutoLogin
         [STAThread]
         private static void Main()
         {
-            //if (IsAdministrator() == false)
-            //{
-            //    try
-            //    {
-            //        ProcessStartInfo procInfo = new ProcessStartInfo();
-            //        procInfo.UseShellExecute = true;
-            //        procInfo.FileName = Application.ExecutablePath;
-            //        procInfo.WorkingDirectory = Environment.CurrentDirectory;
-            //        procInfo.Verb = "runas";
-            //        Process.Start(procInfo);
-            //    }
-            //    catch (Exception e)
-            //    {
-            //        MessageBox.Show(e.Message);
-            //    }
-            //}
-            //else
+            if (IsAdministrator() == false)
             {
-                Application.EnableVisualStyles();
-                Application.SetCompatibleTextRenderingDefault(false);
-                Application.Run(new LostArkAutoLogin());
+                try
+                {
+                    ProcessStartInfo procInfo = new ProcessStartInfo();
+                    procInfo.UseShellExecute = true;
+                    procInfo.FileName = Application.ExecutablePath;
+                    procInfo.WorkingDirectory = Environment.CurrentDirectory;
+                    procInfo.Verb = "runas";
+                    Process.Start(procInfo);
+                }
+                catch (Exception e)
+                {
+                    MessageBox.Show(e.Message);
+                }
             }
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new LostArkAutoLogin());
         }
 
         public static bool IsAdministrator()
