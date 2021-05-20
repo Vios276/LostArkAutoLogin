@@ -28,7 +28,7 @@
     <InstallUrl>https://github.com/Vios276/LostArkAutoLogin/tree/master/Publish/</InstallUrl>
     <ProductName>LostArkAutoLogin</ProductName>
     <PublisherName>ViOs276</PublisherName>
-    <ApplicationRevision>10</ApplicationRevision>
+    <ApplicationRevision>12</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>true</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -128,6 +128,19 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Publish\Application Files\LostArkAutoLogin_1_0_0_10\LostArkAutoLogin.application" />
+    <None Include="Publish\Application Files\LostArkAutoLogin_1_0_0_10\LostArkAutoLogin.exe.config.deploy" />
+    <None Include="Publish\Application Files\LostArkAutoLogin_1_0_0_10\LostArkAutoLogin.exe.deploy" />
+    <None Include="Publish\Application Files\LostArkAutoLogin_1_0_0_10\LostArkAutoLogin.exe.manifest" />
+    <None Include="Publish\Application Files\LostArkAutoLogin_1_0_0_8\LostArkAutoLogin.application" />
+    <None Include="Publish\Application Files\LostArkAutoLogin_1_0_0_8\LostArkAutoLogin.exe.config.deploy" />
+    <None Include="Publish\Application Files\LostArkAutoLogin_1_0_0_8\LostArkAutoLogin.exe.deploy" />
+    <None Include="Publish\Application Files\LostArkAutoLogin_1_0_0_8\LostArkAutoLogin.exe.manifest" />
+    <None Include="Publish\Application Files\LostArkAutoLogin_1_0_0_9\LostArkAutoLogin.application" />
+    <None Include="Publish\Application Files\LostArkAutoLogin_1_0_0_9\LostArkAutoLogin.exe.config.deploy" />
+    <None Include="Publish\Application Files\LostArkAutoLogin_1_0_0_9\LostArkAutoLogin.exe.deploy" />
+    <None Include="Publish\Application Files\LostArkAutoLogin_1_0_0_9\LostArkAutoLogin.exe.manifest" />
+    <None Include="Publish\LostArkAutoLogin.application" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -155,6 +168,8 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Publish\setup.exe" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
