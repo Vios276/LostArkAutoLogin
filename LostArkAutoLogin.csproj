@@ -31,8 +31,8 @@
     <PublisherName>ViOs276</PublisherName>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publich.htm</WebPage>
-    <ApplicationRevision>1</ApplicationRevision>
-    <ApplicationVersion>1.0.0.1</ApplicationVersion>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.0</ApplicationVersion>
     <UseApplicationTrust>true</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -132,12 +132,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="Publish\Application Files\LostArkAutoLogin_1_0_0_0\LostArkAutoLogin.application" />
-    <None Include="Publish\Application Files\LostArkAutoLogin_1_0_0_0\LostArkAutoLogin.exe.config.deploy" />
-    <None Include="Publish\Application Files\LostArkAutoLogin_1_0_0_0\LostArkAutoLogin.exe.deploy" />
-    <None Include="Publish\Application Files\LostArkAutoLogin_1_0_0_0\LostArkAutoLogin.exe.manifest" />
-    <None Include="Publish\Application Files\LostArkAutoLogin_1_0_0_0\Publish\setup.exe.deploy" />
-    <None Include="Publish\LostArkAutoLogin.application" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -166,8 +160,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Publish\publich.htm" />
-    <Content Include="Publish\setup.exe" />
+    <Folder Include="Publish\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

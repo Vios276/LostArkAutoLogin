@@ -11,34 +11,22 @@
   <trustInfo>
     <security>
       <applicationRequestMinimum>
-        <PermissionSet version="1" class="System.Security.NamedPermissionSet" Name="LocalIntranet" Description="Default rights given to applications on the local intranet" ID="Custom" SameSite="site">
-          <IPermission Read="USERNAME" version="1" class="System.Security.Permissions.EnvironmentPermission, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-          <IPermission version="1" class="System.Security.Permissions.FileDialogPermission, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Unrestricted="true" />
-          <IPermission version="1" Permanent="True" Expiry="9223372036854775807" UserQuota="9223372036854775807" Allowed="AssemblyIsolationByUser" class="System.Security.Permissions.IsolatedStorageFilePermission, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-          <IPermission version="1" class="System.Security.Permissions.ReflectionPermission, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Flags="ReflectionEmit, RestrictedMemberAccess" />
-          <IPermission version="1" class="System.Security.Permissions.SecurityPermission, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Flags="Assertion, Execution, BindingRedirects" />
-          <IPermission version="1" class="System.Security.Permissions.UIPermission, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Unrestricted="true" />
-          <IPermission version="1" class="System.Drawing.Printing.PrintingPermission, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" Level="DefaultPrinting" />
-          <IPermission version="1" class="System.Security.Permissions.MediaPermission, WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Audio="SafeAudio" Image="SafeImage" Video="SafeVideo" />
-          <IPermission version="1" class="System.Security.Permissions.WebBrowserPermission, WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Level="Safe" />
-          <IPermission version="1" class="System.Net.DnsPermission, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Unrestricted="true" />
-          <IPermission version="1" class="System.Security.Permissions.TypeDescriptorPermission, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Unrestricted="true" />
-        </PermissionSet>
+        <PermissionSet version="1" class="System.Security.NamedPermissionSet" Name="LocalIntranet" Description="Default rights given to applications on the local intranet" Unrestricted="true" ID="Custom" SameSite="site" />
         <defaultAssemblyRequest permissionSetReference="Custom" />
       </applicationRequestMinimum>
       <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
-        <!--
-          UAC 매니페스트 옵션
-          Windows 사용자 계정 컨트롤 수준을 변경하려면 
-          requestedExecutionLevel 노드를 다음 중 하나로 바꾸세요.
+        <!-- UAC 매니페스트 옵션
+             Windows 사용자 계정 컨트롤 수준을 변경하려면 
+             requestedExecutionLevel 노드를 다음 중 하나로 바꿉니다.
 
-          <requestedExecutionLevel level="asInvoker" uiAccess="false" />
-          <requestedExecutionLevel level="requireAdministrator" uiAccess="false" />
-          <requestedExecutionLevel level="highestAvailable" uiAccess="false" />
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
 
-          이전 버전과의 호환성을 위해 파일 및 레지스트리 가상화를 사용하려면 
-          requestedExecutionLevel 노드를 삭제하세요.
-    -->
+            requestedExecutionLevel 요소를 지정하면 파일 및 레지스트리 가상화를 사용하지 않습니다. 
+            이전 버전과의 호환성을 위해 애플리케이션에 가상화가 필요한 경우
+            이 요소를 제거합니다.
+        -->
         <requestedExecutionLevel level="asInvoker" uiAccess="false" />
       </requestedPrivileges>
     </security>
@@ -56,14 +44,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="LostArkAutoLogin.exe" size="14352">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="LostArkAutoLogin.exe" size="14864">
       <assemblyIdentity name="LostArkAutoLogin" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>kFpVx4ontw95W1xwEucfU0njr1+hn/s/BY+pAyguyVc=</dsig:DigestValue>
+        <dsig:DigestValue>K5zbAzlm7DGSIlu37UTOyuMMR6t9/gUa4rdwRLHop5A=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -76,13 +64,21 @@
       <dsig:DigestValue>VDy5/VrQni+RSOb/6uEMWMc6bGQEaa2e2UdeWG+KK1I=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Publish\setup.exe" size="581632">
-    <hash>
-      <dsig:Transforms>
-        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-      </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>cxaoxofvBooPS0OSzltvVs5fEBZPQKW1Kr4IPrExZOg=</dsig:DigestValue>
-    </hash>
-  </file>
-<publisherIdentity name="CN=LAPTOP-CBGMRHHH\Administrator" issuerKeyHash="c3b85313e2696aec7c090158f5979976089d348b" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>uStYU+iViHdyRp7bKFM1JwXWxdJc4NLqRqrApk5a/sI=</DigestValue></Reference></SignedInfo><SignatureValue>VH4fDNXowWO33uOISMFM4uyL9aYb3YWDBnqDlYjuL5bXOmVDfuxz4hkiELRXyHsJD7+2LUGNyvCO+igid+O6LFvV2H0wIEc0RNscD5/RNl1V6aHgPMozRd//iIyjRIVuWJqhIS15lv618VZu3adkEse3DzCS6H0FRK8w5G2tKzo=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>td8LjREvrj6yAqBlHh5ZvuDAwZWQI/bH9GmOjfW4sUME5OwKxbB1wnDPII4YmgnQIreKzUzDSyjRqiTKfDOO9rGbXpuLEnxE1HlMyQ6hqvCPSWfOcsH/9z9oqAu3M1EuLn2o8FtfD88wEk3xZxbSWVXqVi370bpB8WKTje+KBq0=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="c2fe5a4ea6c0aa46ead2e05cd2c5d60527355328db9e4672778895e853582bb9" Description="" Url=""><as:assemblyIdentity name="LostArkAutoLogin.exe" version="1.0.0.0" publicKeyToken="4e9f47a50df1ad29" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=LAPTOP-CBGMRHHH\Administrator</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>RjT1a1DoL6MxYdnxOkRqwGNbAaT+3y+ARJTwe5V5XFI=</DigestValue></Reference></SignedInfo><SignatureValue>RtrvSAjMP/lyV4EE6db0JO4EysO2ADkFirYEODqLCl711Y3BOQw6BXLI1COnByozMdv3Qrd+tDxAX6p8cwaeRJIN94xhDOGwbzuhXlhPJQEwoDq3/uqbBrqKWZKTZiXK4fmUzXK8b4kFgNgUZu9WFQeXA90dYp+kjlrH3FhSIWA=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>td8LjREvrj6yAqBlHh5ZvuDAwZWQI/bH9GmOjfW4sUME5OwKxbB1wnDPII4YmgnQIreKzUzDSyjRqiTKfDOO9rGbXpuLEnxE1HlMyQ6hqvCPSWfOcsH/9z9oqAu3M1EuLn2o8FtfD88wEk3xZxbSWVXqVi370bpB8WKTje+KBq0=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIICDTCCAXagAwIBAgIQXIeJJ/T3gadCbwo26LVvtzANBgkqhkiG9w0BAQsFADBFMUMwQQYDVQQDHjoATABBAFAAVABPAFAALQBDAEIARwBNAFIASABIAEgAXABBAGQAbQBpAG4AaQBzAHQAcgBhAHQAbwByMB4XDTIxMDUyMDA0MTQwNFoXDTIyMDUyMDEwMTQwNFowRTFDMEEGA1UEAx46AEwAQQBQAFQATwBQAC0AQwBCAEcATQBSAEgASABIAFwAQQBkAG0AaQBuAGkAcwB0AHIAYQB0AG8AcjCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEAtd8LjREvrj6yAqBlHh5ZvuDAwZWQI/bH9GmOjfW4sUME5OwKxbB1wnDPII4YmgnQIreKzUzDSyjRqiTKfDOO9rGbXpuLEnxE1HlMyQ6hqvCPSWfOcsH/9z9oqAu3M1EuLn2o8FtfD88wEk3xZxbSWVXqVi370bpB8WKTje+KBq0CAwEAATANBgkqhkiG9w0BAQsFAAOBgQCDN48frRO9d5sZq7l3cGfGcmoDwiow3bRdWZkmyQjUX5HUBnBMKgX4fC+7ugiNBwttQKQtHowIpHogsX7B160tcEQt3kMzJrnj6v9cfsCk8wVcbycUu1mRjtWS49nHfSztC5gx9wB7lG340qpOd4lsghEAckeyI6iBFq7KIVr7Fw==</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>
+  <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">
+    <application>
+      <!-- 이 애플리케이션이 테스트되고 함께 작동하도록 설계된 Windows 버전
+           목록입니다. 해당 요소의 주석 처리를 제거하면 Windows에서
+           호환 가능성이 가장 큰 환경을 자동으로 선택합니다. -->
+      <!-- Windows Vista -->
+      <!--<supportedOS Id="{e2011457-1546-43c5-a5fe-008deee3d3f0}" />-->
+      <!-- Windows 7 -->
+      <!--<supportedOS Id="{35138b9a-5d96-4fbd-8e2d-a2440225f93a}" />-->
+      <!-- Windows 8 -->
+      <!--<supportedOS Id="{4a2f28e3-53b9-4441-ba9c-d69d4a4a6e38}" />-->
+      <!-- Windows 8.1 -->
+      <!--<supportedOS Id="{1f676c76-80e1-4239-95bb-83d0f6d0da78}" />-->
+      <!-- Windows 10 -->
+      <!--<supportedOS Id="{8e0f7a12-bfb3-4fe8-b9a5-48fd50a15a9a}" />-->
+    </application>
+  </compatibility>
+<publisherIdentity name="CN=LAPTOP-CBGMRHHH\Administrator" issuerKeyHash="c3b85313e2696aec7c090158f5979976089d348b" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>ioAmmqwNm8xcHKm86PUlRAPT/ipQh1+dHnSVVmOyWOc=</DigestValue></Reference></SignedInfo><SignatureValue>YQ/bBqfD2hk641m1ulBJjb90Y7wKzOfwzgiRgeORPnFYimUg0ImYca6Y/uo3TeelBa8oDRs04gPiKSrIZv+3ucEIxAxbJrUNF2w3J7X1DeTZqkIOoxDA1nIwinunTRImBeGhbQw3L/XExTQo4rFuKRY633u/YY6mI0BU4PNdw6k=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>td8LjREvrj6yAqBlHh5ZvuDAwZWQI/bH9GmOjfW4sUME5OwKxbB1wnDPII4YmgnQIreKzUzDSyjRqiTKfDOO9rGbXpuLEnxE1HlMyQ6hqvCPSWfOcsH/9z9oqAu3M1EuLn2o8FtfD88wEk3xZxbSWVXqVi370bpB8WKTje+KBq0=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="e758b2635695741e9d5f87502afed3034425f5e8bca91c5ccc9b0dac9a26808a" Description="" Url=""><as:assemblyIdentity name="LostArkAutoLogin.exe" version="1.0.0.0" publicKeyToken="4e9f47a50df1ad29" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=LAPTOP-CBGMRHHH\Administrator</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>wj06C9DxvU4o1gExnryCUqKCdDfT6c8OiKQ8Y7KphW0=</DigestValue></Reference></SignedInfo><SignatureValue>lh5A7D6hR+FlO3VSLBZ9yS/LP5uEt8FF7nrIcciYbkTNh0QTobsrXVaTDlZOD6EboI1qW82vx7rBHEt/OoiuEggX9yadY2mlnfimukFBbz8MZzdHXviPHiYcHTEmTHSc3TckuCxPnEAgv4yVuonF2XBkrQtN0juddb6UShcaH/s=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>td8LjREvrj6yAqBlHh5ZvuDAwZWQI/bH9GmOjfW4sUME5OwKxbB1wnDPII4YmgnQIreKzUzDSyjRqiTKfDOO9rGbXpuLEnxE1HlMyQ6hqvCPSWfOcsH/9z9oqAu3M1EuLn2o8FtfD88wEk3xZxbSWVXqVi370bpB8WKTje+KBq0=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIICDTCCAXagAwIBAgIQXIeJJ/T3gadCbwo26LVvtzANBgkqhkiG9w0BAQsFADBFMUMwQQYDVQQDHjoATABBAFAAVABPAFAALQBDAEIARwBNAFIASABIAEgAXABBAGQAbQBpAG4AaQBzAHQAcgBhAHQAbwByMB4XDTIxMDUyMDA0MTQwNFoXDTIyMDUyMDEwMTQwNFowRTFDMEEGA1UEAx46AEwAQQBQAFQATwBQAC0AQwBCAEcATQBSAEgASABIAFwAQQBkAG0AaQBuAGkAcwB0AHIAYQB0AG8AcjCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEAtd8LjREvrj6yAqBlHh5ZvuDAwZWQI/bH9GmOjfW4sUME5OwKxbB1wnDPII4YmgnQIreKzUzDSyjRqiTKfDOO9rGbXpuLEnxE1HlMyQ6hqvCPSWfOcsH/9z9oqAu3M1EuLn2o8FtfD88wEk3xZxbSWVXqVi370bpB8WKTje+KBq0CAwEAATANBgkqhkiG9w0BAQsFAAOBgQCDN48frRO9d5sZq7l3cGfGcmoDwiow3bRdWZkmyQjUX5HUBnBMKgX4fC+7ugiNBwttQKQtHowIpHogsX7B160tcEQt3kMzJrnj6v9cfsCk8wVcbycUu1mRjtWS49nHfSztC5gx9wB7lG340qpOd4lsghEAckeyI6iBFq7KIVr7Fw==</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>
