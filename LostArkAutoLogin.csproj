@@ -31,11 +31,10 @@
     <PublisherName>ViOs276</PublisherName>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publich.htm</WebPage>
-    <ApplicationRevision>1</ApplicationRevision>
-    <ApplicationVersion>1.0.1.1</ApplicationVersion>
-    <UseApplicationTrust>true</UseApplicationTrust>
+    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationVersion>1.0.1.2</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
-    <ExcludeDeploymentUrl>true</ExcludeDeploymentUrl>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -67,11 +66,10 @@
   <PropertyGroup />
   <PropertyGroup />
   <PropertyGroup>
-    <ManifestCertificateThumbprint>228609A32016A40DDA781DBDB4124DC242500B11</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>5F888C17283A787AD2D7F87D6E8A0F7C878AB417</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>
-    </ManifestKeyFile>
+    <ManifestKeyFile>LostArkAutoLogin_1_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
     <SignManifests>true</SignManifests>
@@ -124,6 +122,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="LostArkAutoLogin_1_TemporaryKey.pfx" />
     <None Include="LostArkAutoLogin_TemporaryKey.pfx" />
     <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">
