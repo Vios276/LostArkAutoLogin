@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Windows.Forms;
+using Timer = System.Timers.Timer;
 
 namespace LostArkAutoLogin
 {
@@ -34,7 +36,7 @@ namespace LostArkAutoLogin
         protected override void OnLoad(EventArgs e)
         {
             base.OnLoad(e);
-
+            Browser.ScriptErrorsSuppressed = true;
             Browser.DocumentCompleted += Browser_DocumentCompleted;
             timer.AutoReset = true;
             timer.Elapsed += Timer_Elapsed;
@@ -42,14 +44,27 @@ namespace LostArkAutoLogin
         
         private void Timer_Elapsed(object sender, System.Timers.ElapsedEventArgs e)
         {
-            if (e.Url.ToString() == "https://lostark.game.onstove.com/Main")
-                Close();
+            var processList = Process.GetProcessesByName("STOVE");
+            if (processList.Length > 0)
+            {
+                Application.ExitThread();
+                Environment.Exit(0);
+            }
         }
-
+        
         private void Browser_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
         {
             if (Browser.Url.ToString() == "https://lostark.game.onstove.com/Main")
-                Close();
+            {
+                var buttonList = Browser.Document.GetElementsByTagName("button");
+                foreach (HtmlElement htmlElement in buttonList)
+                {
+                    if (htmlElement.InnerText.Equals("게임시작"))
+                    {
+                        htmlElement.InvokeMember("Click");
+                    }
+                }
+            }
         }
     }
 }
