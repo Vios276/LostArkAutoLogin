@@ -30,7 +30,7 @@
     <ProductName>LostArkAutoLogin</ProductName>
     <PublisherName>ViOs276</PublisherName>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
-    <WebPage>publich.htm</WebPage>
+    <WebPage>publish.htm</WebPage>
     <ApplicationRevision>2</ApplicationRevision>
     <ApplicationVersion>1.0.1.2</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
@@ -58,7 +58,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <TargetZone>LocalIntranet</TargetZone>
+    <TargetZone>Custom</TargetZone>
   </PropertyGroup>
   <PropertyGroup>
     <GenerateManifests>true</GenerateManifests>
@@ -66,10 +66,10 @@
   <PropertyGroup />
   <PropertyGroup />
   <PropertyGroup>
-    <ManifestCertificateThumbprint>5F888C17283A787AD2D7F87D6E8A0F7C878AB417</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>305449F86094CDE440BA75C835558598AD0486EF</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>LostArkAutoLogin_1_TemporaryKey.pfx</ManifestKeyFile>
+    <ManifestKeyFile>mysign.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
     <SignManifests>true</SignManifests>
@@ -122,8 +122,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="LostArkAutoLogin_1_TemporaryKey.pfx" />
-    <None Include="LostArkAutoLogin_TemporaryKey.pfx" />
+    <None Include="mysign.pfx" />
     <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
