@@ -134,6 +134,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Publish\LostArkAutoLogin.application" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -162,7 +163,11 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Publish\" />
+    <Folder Include="Publish\Application Files\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Publish\publish.htm" />
+    <Content Include="Publish\setup.exe" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
