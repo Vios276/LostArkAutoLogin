@@ -5,6 +5,9 @@ namespace LostArkAutoLogin
 {
     public partial class Form2 : Form
     {
+        private Timer timer = new Timer(1000);
+        private Timer mainTimer = new Timer(3000);
+
         public Form2()
         {
             InitializeComponent();
@@ -33,10 +36,11 @@ namespace LostArkAutoLogin
             base.OnLoad(e);
 
             Browser.DocumentCompleted += Browser_DocumentCompleted;
-            Browser.Navigating += Browser_Navigating;
+            timer.AutoReset = true;
+            timer.Elapsed += Timer_Elapsed;
         }
-
-        private void Browser_Navigating(object sender, WebBrowserNavigatingEventArgs e)
+        
+        private void Timer_Elapsed(object sender, System.Timers.ElapsedEventArgs e)
         {
             if (e.Url.ToString() == "https://lostark.game.onstove.com/Main")
                 Close();

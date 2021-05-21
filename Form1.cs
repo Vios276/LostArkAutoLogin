@@ -116,15 +116,12 @@ namespace LostArkAutoLogin
             reqParams += "&inflow_path=LOST_ARK&game_no=45&show_play_button=N&callback_url=https://member.onstove.com/oauth/" + snsType + "/signin&forever=false";
             var baseUrl = "https://member.onstove.com/oauth/" + snsType + "/code?" + reqParams;
 
-            if (((Button)sender).Name.Equals("btnAutoLogin"))
+            var popup = new Form2(baseUrl, snsType.Equals("naver"));
+            var result = popup.ShowDialog(this);
+
+            if (result == DialogResult.OK)
             {
-                var popup = new Form2(baseUrl, snsType.Equals("naver"));
-                popup.Show(this);
-            }
-            else
-            {
-                wb.Navigate(baseUrl);
-                timer.Start();
+
             }
         }
     }
